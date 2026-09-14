@@ -17,7 +17,7 @@ class TextQuestGame(BoxLayout):
         self.spacing = 10
         self.padding = 10
 
-        # Все оригинальные переменные из твоего кода
+        # Все оригинальные переменные из твоего кода.
         self.rp = 0
         self.lg = 0 
         self.st = 0
