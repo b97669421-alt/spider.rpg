@@ -7,7 +7,7 @@ from kivy.uix.label import Label
 from kivy.clock import Clock
 from kivy.core.window import Window
 
-# Эмуляция экрана телефона при тестах на ПК (на самом смартфоне растянется на весь экран)
+# Эмуляция экрана телефона при тестах на ПК(на самом смартфоне растянется на весь экран)
 Window.size = (400, 650)
 
 class TextQuestGame(BoxLayout):
