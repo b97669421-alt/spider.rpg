@@ -7,14 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -23,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y ccache lld libffi-dev libssl-dev autoconf automake libtool textcleaner
+          sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libssl-dev libtinfo5 cmake libffi-dev libgmp-dev
           pip install --upgrade pip
           pip install Cython==0.29.33 buildozer kivy
 
@@ -42,4 +34,5 @@ jobs:
         with:
           name: game-apk
           path: bin/*.apk
+
 
